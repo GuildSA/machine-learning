@@ -1,0 +1,30 @@
+
+--------------------------------------------------------------------------------
+
+
+conda create -n py36env python=3.6 tensorflow=1.14.0 matplotlib=3.1.0 jupyterlab=1.0.2 pandas=0.25.1 scikit-learn=0.21.2 seaborn=0.9.0
+
+
+--------------------------------------------------------------------------------
+
+-- How to uninstall Anaconda completely from macOS --
+
+To remove the configs:
+
+conda install anaconda-clean
+anaconda-clean --yes
+
+
+Once the configs are removed you can delete the anaconda install folder, which is usually under your home dir:
+
+rm -rf ~/anaconda3
+Also, the anaconda-clean --yes command creates a backup in your home directory of the format ~/.anaconda_backup/<timestamp>. Make sure to delete that one also.
+
+
+Now if you want to clean all, you will also have to delete the two last lines added to your .bash_profile. They look like:
+
+# added by Anaconda3 5.2.0 installer
+export PATH="/Users/ody/anaconda3/bin:$PATH"
+
+
+--------------------------------------------------------------------------------
